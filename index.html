@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="ajaxExample">
+<head lang="he-IL">
+<meta charset="utf-8">
+<title>Angular Ajax מדריך</title>
+</head>
+<body>
+    <form ng-controller="mainController">
+<h2>הטופס</h2>
+	
+<p>מלא שם חדש והגש את הטופס</p>
+<div>
+    <label>שם</label>
+    <input type="text" ng-model="newName">
+</div>
+		
+<div>
+    <label>כינוי</label>
+    <input type="text" ng-model="newNickName">
+</div>
+
+<input type="button" value="הוסף" ng-click="addUser()">
+	
+</form>
+
+<h2>הרשימה</h2>
+<p>ברשימה זו יוצגו השמות שהתווספו באמצעות הטופס.</p>
+
+<ul>
+    <li ng-repeat="user in users">
+        <button ng-click="deleteUser( user.id )">Delete</button> {{ user.name }} {{ user.nickName }}
+    </li>
+</ul>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+<script src="/assets/js/app.js"></script>
+
+
+</body>
+</html>
