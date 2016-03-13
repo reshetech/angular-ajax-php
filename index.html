@@ -6,16 +6,16 @@
 </head>
 <body>
     <form ng-controller="mainController">
-<h2>הטופס</h2>
+<h2>The form</h2>
 	
-<p>מלא שם חדש והגש את הטופס</p>
+<p>Fill the form with a new name and hit submit to save.</p>
 <div>
-    <label>שם</label>
+    <label>Name</label>
     <input type="text" ng-model="newName">
 </div>
 		
 <div>
-    <label>כינוי</label>
+    <label>Nick name</label>
     <input type="text" ng-model="newNickName">
 </div>
 
@@ -23,8 +23,8 @@
 	
 </form>
 
-<h2>הרשימה</h2>
-<p>ברשימה זו יוצגו השמות שהתווספו באמצעות הטופס.</p>
+<h2>The list</h2>
+<p>The list of users</p>
 
 <ul>
     <li ng-repeat="user in users">
